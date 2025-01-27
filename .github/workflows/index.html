@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="高林的個人網頁">
+    <meta name="keywords" content="高林,gaolin,Gaolin,GaoLin,帥哥,高林網站">
+    <meta name="author" content="GaoLin ig:gaolin_0107">
+    <meta name="robots" content="all">
+    <meta name="copyright" content="stevechow">
+    <title>高林的個人網頁</title>
+    <link rel="icon" type="image/x-icon" href="assets/webimg.ico">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var loadingScreen = document.getElementById("loading-screen");
+        window.addEventListener("load", function() {
+            loadingScreen.style.display = "none";
+        });
+    });
+  </script>
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+
+  <header>   
+      <nav class="navbar">
+          <div class="navbar-container">
+              <a href="index.html" class="navbar-brand" id="navbar-brand" style="font-size: 120%;">回首頁</a>
+              <!--
+              <ul class="navbar-menu" id="navbar-menu">
+                <a href="https://www.instagram.com/gaolin_0107/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/gaolin0107" target="_blank">Facebook</a>
+              </ul>
+            -->
+          </div>
+      </nav>
+  </header>
+
+  <div class="slideshow-container" style="position: relative; text-align:center; width:100%; height:90svh">
+    <div class="mySlides">
+      <div style="position: relative; text-align:center;">
+        <img src="assets/img/bk1.jpg" id="home" style="width:100%; height:100vh; object-fit:cover; object-position:center; animation: zoomOut 2s ease-in-out;">
+        <section style="position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); color: aliceblue;">
+            <div class="home-word">
+                <h1 style="display: inline-block;">製作</h1>
+                <br><br>
+                <br><br>
+                <br><br>
+                <h4 style="display: inline-block;">歡迎來到我的網站</h4>
+            </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div style="position: relative; text-align:center;">
+        <img src="assets/img/bk1.jpg" id="home" style="width:100%; height:100vh; object-fit:cover; object-position:center;">
+        <section style="position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); color: aliceblue;">
+            <div>
+                <h1 style="display: inline-block;">2</h1>
+                <br><br>
+                <br><br>
+                <br><br>
+                <h4 style="display: inline-block;">歡迎來到我的網站</h4>
+            </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div style="position: relative; text-align:center;">
+        <img src="assets/img/bk1.jpg" id="home" style="width:100%; height:100vh; object-fit:cover; object-position:center;">
+        <section style="position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); color: aliceblue;">
+            <div">
+                <h1 style="display: inline-block;">3</h1>
+                <br><br>
+                <br><br>
+                <br><br>
+                <h4 style="display: inline-block;">歡迎來到我的網站</h4>
+            </div>
+        </section>
+      </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container" style="position: relative; text-align:center; width:100%; height:10svh">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+  <div style="position: relative; text-align:center;">
+      <img src="assets/img/bk1.jpg" id="home" style="width:100%; height:100vh; object-fit:cover; object-position:center;">
+      <section style="position:absolute; top:40%; left:50%; transform:translate(-50%, -50%); color: aliceblue;">
+          <div class="container, home-word">
+              <h1 style="display: inline-block;">哈 囉</h1>
+              <br><br>
+              <br><br>
+              <br><br>
+              <h4 style="display: inline-block;">歡迎來到我的網站</h4>
+          </div>
+      </section>
+      <a href="#about" style="position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color: aliceblue; font-size: 24px; text-decoration: none;">
+          下滑
+      </a>
+  </div>
+
+
+
+
+  
+</body>
+</html>
